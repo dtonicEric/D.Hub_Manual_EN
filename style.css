@@ -1,0 +1,79 @@
+/* @theme my-theme*/
+
+/* TODO:
+
+*/
+
+/* 슬라이드 크기 설정 (A4 사이즈) */
+section {
+    width: 210mm;
+    height: 297mm;
+    background: 
+        linear-gradient(
+            to bottom,
+            #003366 0px, /* 상단  */ 
+            #003366 100px, /* 상단 고정 100px */ 
+            #f1f1f1 100px, /* 중간 시작 */ 
+            #f1f1f1 calc(100% - 50px)
+        ),
+        no-repeat url('./img/logo.png'); /* 하단 배경 이미지 */
+    background-size: cover;  /* 이미지 크기 설정 */
+    color: #333333;
+    padding: 0% 2% 0% 2%; /* 상하좌우 여백 */
+    margin: 0px;
+    font-size: 16px;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #003366; /* 푸터 배경색 */
+    background-image: url('./img/logo.png');
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    background-position: 10px 10px; /* 이미지 위치 조정 */
+}
+
+section::after {
+    content: '';
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+/* 제목 및 텍스트 스타일 */
+h1, 
+h2,
+h3 {
+    color: #ffffff; /* 글자 색상: 흰색 */
+}
+
+h1 {
+    font-size: 30px;
+    margin: 10px 0px 5px 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0px 0px 40px 20px;
+}
+/* tableStyles.css */
+table {
+    border: 1px solid #c0c0c0;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th,
+td {
+    border: 1px solid #c0c0c0;
+    text-align: start;
+    font-size: 16px;
+    padding: 10px;
+}
+
